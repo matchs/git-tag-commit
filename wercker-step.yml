@@ -1,6 +1,14 @@
 name: git-tag-commit
 version: 0.1.0
-description: Adds a tag to a given commit
+description: Adds a tag to a given commit if the deploy passes
+keywords:
+  - git
+  - tag
+  - deploy
+  - github
+  - push
+  - tags
+  - commit
 properties:
   token:
     type: string
@@ -8,6 +16,12 @@ properties:
   repository:
     type: string
     required: false
+  branch:
+    type: string
+    required: false
   commmit:
     type: string
     required: false
+  tag:
+    type: string
+    required: true
