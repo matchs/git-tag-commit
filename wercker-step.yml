@@ -1,0 +1,13 @@
+name: git-tag-commit
+version: 0.1.0
+description: Adds a tag to a given commit
+properties:
+  token:
+    type: string
+    required: true
+  repository:
+    type: string
+    required: false
+  commmit:
+    type: string
+    required: false
