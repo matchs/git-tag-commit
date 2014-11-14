@@ -60,7 +60,7 @@ then
 
     # Get tags.
     sudo mkdir /tmp/repo
-    cd mkdir /tmp/repo
+    cd /tmp/repo
     git init
     git remote add origin $remote
     git fetch --tags $remote
