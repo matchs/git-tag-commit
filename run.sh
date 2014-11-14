@@ -59,11 +59,15 @@ then
     remote="https://$tag@github.com/$repository"
 
     # Get tags.
+    sudo mkdir /tmp/repo
+    cd mkdir /tmp/repo
+    git init
+    git remote add origin $remote
     git fetch --tags $remote
     debug 'fetched git tags'
 
     # Delete the tag if it exists, otherwise just skip
-    if (git tag -l | grep "$tag" &> /dev/null);
+    if [git tag -l | grep "$tag" &> /dev/null];
     then
         git tag -d "$tag"
         debug 'Deleted existing tag'
