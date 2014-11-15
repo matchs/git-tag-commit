@@ -70,6 +70,7 @@ then
 
     # Tag your commit.
     git tag $tag
+    debug "tagging"
     git push --tags $commit
     info "Pushed tag \"$tag\" to \"$repository\""
 else
