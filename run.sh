@@ -69,7 +69,7 @@ then
 
     # Tag your commit.
     git tag $tag
-    git push --tags 
+    git push --tags $commit
     info "Pushed tag \"$tag\" to \"$repository\""
 else
     info "Skipping, your deploy result was $WERCKER_RESULT"
