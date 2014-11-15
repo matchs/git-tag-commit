@@ -69,9 +69,9 @@ then
     debug 'fetched git tags'
 
     # Tag your commit.
-    git tag $tag
+    git tag -a $tag $commit
     debug "tagging"
-    git push --tags $commit
+    git push origin --tags 
     info "Pushed tag \"$tag\" to \"$repository\""
 else
     info "Skipping, your deploy result was $WERCKER_RESULT"
