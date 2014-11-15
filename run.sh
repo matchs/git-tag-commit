@@ -64,7 +64,7 @@ then
     cd /tmp/repo
     git init
     git remote add origin $remote
-    git fetch origin/$WERCKER_GIT_BRANCH
+    git fetch origin 
     git fetch --tags 
     debug 'fetched git tags'
 
