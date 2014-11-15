@@ -56,7 +56,7 @@ then
     git config --global user.name "wercker"
     debug 'configured git'
 
-    remote="https://$tag@github.com/$repo"
+    remote="https://$token@github.com/$repo"
 
     # Get tags.
     sudo mkdir /tmp/repo
