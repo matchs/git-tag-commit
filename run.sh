@@ -56,7 +56,7 @@ then
     git config --global user.name "wercker"
     debug 'configured git'
 
-    remote="https://$tag@github.com/$repository"
+    remote="https://$tag@github.com/$repo"
 
     # Get tags.
     sudo mkdir /tmp/repo
@@ -64,7 +64,7 @@ then
     cd /tmp/repo
     git init
     git remote add origin $remote
-    git fetch --tags $remote
+    git fetch --tags 
     debug 'fetched git tags'
 
     # Delete the tag if it exists, otherwise just skip
@@ -76,7 +76,7 @@ then
 
     # Tag your commit.
     git tag $tag
-    git push --tags $remote
+    git push --tags 
     info "Pushed tag \"$tag\" to \"$repository\""
 else
     info "Skipping, your deploy result was $WERCKER_RESULT"
