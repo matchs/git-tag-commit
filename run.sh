@@ -67,13 +67,6 @@ then
     git fetch --tags 
     debug 'fetched git tags'
 
-    # Delete the tag if it exists, otherwise just skip
-    if [git tag -l | grep "$tag" &> /dev/null];
-    then
-        git tag -d "$tag"
-        debug 'Deleted existing tag'
-    fi
-
     # Tag your commit.
     git tag $tag
     git push --tags 
